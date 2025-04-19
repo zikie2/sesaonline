@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Science Education Support Agency (SESA)</title>
+  <meta name="description" content="SESA offers quality online science lessons for IGCSE, AS, and A-Level students in Chemistry, Physics, Biology, and Mathematics taught by experienced educators." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://js.stripe.com/v3/"></script>
+  <style>
+    :root {
+      --apple-green: #8DB600;
+      --gold-yellow: #FFD700;
+    }
+    .bg-apple-green { background-color: var(--apple-green); }
+    .text-apple-green { color: var(--apple-green); }
+    .bg-gold-yellow { background-color: var(--gold-yellow); }
+    .text-gold-yellow { color: var(--gold-yellow); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-apple-green text-white p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Science Education Support Agency (SESA)</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="subjects.html" class="hover:underline">Subjects</a>
+        <a href="teachers.html" class="hover:underline">Teachers</a>
+        <a href="register.html" class="hover:underline">Register</a>
+        <a href="student-dashboard.html" class="hover:underline">Student Portal</a>
+        <a href="downloads.html" class="hover:underline">Resources</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+        <a href="payment.html" class="hover:underline">Pay</a>
+        <a href="car-wash-accessories.html" class="hover:underline">Car Wash Accessories</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="bg-white py-20 text-center">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold mb-4 text-apple-green">Welcome to SESA</h2>
+      <p class="text-lg text-gray-600">Empowering students to succeed in IGCSE and A-Level science and mathematics with expert online teaching.</p>
+      <p class="mt-4 text-gray-700">Join us today to access high-quality online lessons in Mathematics, Chemistry, Physics, and Biology, taught by experienced and qualified teachers.</p>
+    </div>
+  </section>
+
+  <section class="bg-gold-yellow text-gray-800 py-12 text-center">
+    <div class="container mx-auto">
+      <h3 class="text-2xl font-semibold mb-4">Subjects Offered</h3>
+      <p>Explore detailed subject information by clicking the "Subjects" page above.</p>
+    </div>
+  </section>
+
+  <section class="bg-white py-12 text-center">
+    <div class="container mx-auto">
+      <h3 class="text-2xl font-semibold mb-4 text-apple-green">Meet Our Educators</h3>
+      <p>Visit the "Teachers" page to learn more about our expert instructors and their qualifications.</p>
+    </div>
+  </section>
+
+  <section class="bg-gray-100 py-12 text-center">
+    <div class="container mx-auto">
+      <h3 class="text-2xl font-semibold mb-4">Get Started</h3>
+      <p class="mb-4">Click on the "Register" page to sign up for lessons and receive your access credentials.</p>
+      <a href="register.html" class="inline-block bg-apple-green text-white px-6 py-2 rounded hover:bg-green-700">Register Now</a>
+    </div>
+  </section>
+
+  <section class="bg-white py-12 text-center">
+    <div class="container mx-auto">
+      <h3 class="text-2xl font-semibold mb-4 text-apple-green">Resources</h3>
+      <p class="mb-6">Download useful learning materials for your IGCSE and A-Level studies:</p>
+      <ul class="space-y-4 text-lg">
+        <li>
+          <a href="docs/IGCSE_Maths_Notes.pdf" class="text-blue-600 hover:underline" download>📚 IGCSE Mathematics Notes (PDF)</a>
+        </li>
+        <li>
+          <a href="docs/A_Level_Chemistry_PowerPoint.pptx" class="text-blue-600 hover:underline" download>🧪 A-Level Chemistry Slides (PPTX)</a>
+        </li>
+        <li>
+          <a href="docs/Biology_Lab_Guide.docx" class="text-blue-600 hover:underline" download>🧬 Biology Lab Guide (DOCX)</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bg-gold-yellow text-center py-12">
+    <div class="container mx-auto">
+      <h3 class="text-2xl font-bold mb-4">Make Payment</h3>
+      <p class="mb-6">To complete your registration, please make your payment using Visa card.</p>
+      <form action="https://example.com/payment-gateway" method="POST" class="max-w-md mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8">
+        <label class="block text-left mb-2">Cardholder Name:</label>
+        <input type="text" name="cardholder" class="border w-full p-2 mb-4" required>
+        <label class="block text-left mb-2">Card Number:</label>
+        <input type="text" name="cardnumber" class="border w-full p-2 mb-4" required>
+        <label class="block text-left mb-2">Expiry Date:</label>
+        <input type="text" name="expiry" placeholder="MM/YY" class="border w-full p-2 mb-4" required>
+        <label class="block text-left mb-2">CVV:</label>
+        <input type="text" name="cvv" class="border w-full p-2 mb-4" required>
+        <label class="block text-left mb-2">Amount (USD):</label>
+        <input type="number" name="amount" class="border w-full p-2 mb-4" required>
+        <button type="submit" class="bg-apple-green text-white px-6 py-2 rounded hover:bg-green-700">Pay with Visa</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white text-center p-4">
+    <p>&copy; 2025 Science Education Support Agency (SESA). All rights reserved.</p>
+  </footer>
+</body>
+</html>
